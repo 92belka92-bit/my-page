@@ -1,0 +1,552 @@
+/* Подключение шрифта JetBrains Mono */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&display=swap');
+/* Подключение шрифта Inter через Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap');
+
+/* Сброс */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Размер страницы адаптивный */
+body {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/*Ограничиваем ширину страницы на 15px*/
+.page {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/*Ограничиваем ширину контента на 80px*/
+.intro-text, .services-matrix, .women-hats {
+  padding: 0 80px;
+}
+
+/* Шапка */
+.header {
+  display: flex;
+  flex-direction: column; /* два ряда */
+  gap: 0; /* расстояние между рядами */
+}
+
+/* Верхний ряд */
+.top-row {
+  display: flex;
+  justify-content: space-between; /* соцсети слева, логотип по центру, поиск справа */
+  align-items: center;
+  background-color: #ffffff;
+  padding: 20px 86px 25px 73px;
+  width: 100%;
+}
+
+/* Соцсети */
+.socials {
+  display: flex;
+  gap: 15px;
+}
+
+.socials img {
+  width: 36px;
+  height: 36px;
+}
+
+/* Логотип */
+.logotip {
+  width: 73px;
+  height: 65px;
+}
+
+.logotip img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Поиск, Лайк, Корзина */
+.search {
+  display: flex;
+  gap: 10px;
+}
+
+.search img {
+  width: 36px;
+  height: 36px;
+}
+
+/* 2 ряд: меню */
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;          /* расстояние между пунктами */
+  height: 70px;       /* высота блока */
+  background-color: #000000;
+  font-weight: 700;   /* bold */
+  font-size: 20px;
+  line-height: 130%;
+}
+
+.menu a {
+  font-family: 'JetBrains Mono', monospace;
+  color: #FFFFFF;         /* белый текст */
+  text-decoration: none;  /* убираем подчеркивание */
+}
+
+.menu a.highlight {
+  color: #FF6668;         /* пункт НОВИНКИ */
+}
+
+/* Адаптив */
+@media (max-width: 768px) {
+  .header {
+    gap: 10px;
+  }
+
+  .top-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .logotip img {
+    height: 65px;
+  }
+
+  .socials img,
+  .search img {
+    width: 15px;
+    height: 15px;
+  }
+
+  .menu {
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+    height: auto;
+  }
+}
+/* Третий ряд шапки */
+.third-row {
+  width: 100%;
+}
+
+.third-row img {
+  width: 100%;
+  height: auto;      /* сохраняем пропорции */
+  display: block;    /* убирает лишние отступы под изображением */
+  object-fit: cover; /* масштабирование изображения */
+  border-radius: 0;  /* если нужно без скруглений */
+}
+
+/* Вводная */
+/* 1 ряд: вводная */
+.intro-text {
+  width: 840px;
+  max-width: 100%;
+  margin: 40px auto;
+  padding: 0 20px; /* чтобы текст не прилипал к краям на маленьких экранах */
+  text-align: center;
+}
+
+.intro-text p {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 120%;
+  color: #000000;
+  margin: 0;
+}
+
+/* 📱 Адаптация */
+@media (max-width: 768px) {
+
+  .intro-text {
+    margin: 30px auto;
+  }
+
+  .intro-text p {
+    font-size: 18px;   /* уменьшаем шрифт */
+    line-height: 130%; /* немного увеличиваем межстрочный */
+  }
+}
+
+/* 2 ряд: матрица 4 элементов */
+.services-matrix {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 колонки одинаковой ширины */
+  grid-template-rows: repeat(2, auto);  /* 2 строки */
+  gap: 20px;                            /* расстояние между элементами */
+  margin: 40px auto;
+}
+
+.service-item {
+  background-color: #f5f5f5;
+  padding: 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  text-align: left; /* выравнивание по левому краю */
+
+}
+
+.service-item img {
+  width: 52px;
+  height: 56px;
+  object-fit: contain;
+}
+
+.service-item h2 {
+  width: 364px;
+  height: 23px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400; /* regular */
+  font-size: 20px;
+  line-height: 130%;
+  color: #000000;
+  margin: 10px 0 5px 0;
+}
+
+.service-item p {
+  width: 364px;
+  height: 51px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 300; /* light */
+  font-size: 20px;
+  line-height: 130%;
+  color: #000000;
+  margin: 0;
+}
+/* Адаптив: на экранах <= 768px делаем 1 колонку */
+@media (max-width: 768px) {
+  .services-matrix {
+    grid-template-columns: 1fr; /* одна колонка */
+    grid-template-rows: auto;   /* каждая строка под свой контент */
+  }
+}
+
+/* 3 ряд: шапки женские */
+/* Контейнер для заголовка и ссылки */
+.women-hats .header-row {
+  display: flex;
+  justify-content: space-between; /* h1 слева, ссылка справа */
+  align-items: baseline;          /* выравнивание по базовой линии текста */
+  margin-bottom: -23px;            /* отступ уменьшен между заголовком и карточками шапкок */
+}
+
+/* Заголовок: Женские шапки */
+.women-hats h1 {
+  position: static;
+  width: auto;
+  font-size: 120px;
+  left: 0;
+  top: 0;
+  font-family: 'JetBrains Mono', monospace;
+  font-style: normal;
+  font-weight: 300; /* Light */
+  font-size: 120px;
+  line-height: 110%;
+  color: #000000;
+  text-align: left;
+  margin: 0;
+}
+
+/* Ссылка "… все новинки" справа от заголовка */
+.women-hats .all-news {
+  display: flex;           /* чтобы иконка и текст были в одной строке */
+  align-items: baseline;     /* выравнивание по базовой линии текста */
+  position: static;      /* позиционирование по макету */
+  top: 88px;               /* отступ сверху */
+  left: 682px;             /* отступ слева от контейнера */
+  width: 156px;            /* ширина блока ссылки */
+  height: 35px;            /* высота блока */
+  font-family: 'Inter', sans-serif; /* шрифт текста ссылки */
+  font-style: normal;       /* обычный стиль */
+  font-weight: 400;         /* Regular */
+  font-size: 20px;          /* размер текста */
+  line-height: 130%;        /* высота строки */
+  color: #B2030F;           /* цвет текста из макета */
+  text-decoration: none;    /* убираем подчеркивание */
+  white-space: nowrap;
+}
+
+/* Иконка "..." слева от текста ссылки */
+.women-hats .all-news img {
+  width: 22px;              /* ширина иконки */
+  height: 6px;             /* высота иконки */
+  margin-right: 10px;       /* отступ между иконкой и текстом */
+}
+
+
+/* Основная структура шапок */
+.hat-row {
+  display: flex;
+  gap: 20px; /* расстояние между карточками шапок */
+  margin: 0; /* отступ между заголовком и карточками товаров */
+  align-items: flex-end; /* выравнивание по нижнему краю */
+  margin-bottom: 88px; /* отступ между карточками товаров и подвалом */
+}
+
+.hat-column {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.hat img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* размеры для шапок */
+.hat-large { width: 471px; }
+.hat-medium { width: 349px; }
+.hat-small { width: 226px; }
+
+/* Описание под фото */
+.hat p {
+  width: 256px;
+  max-width: 100%;
+  margin: 10px 0 0 0;
+  text-align: left;
+  
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 130%;
+  color: #424242;
+}
+
+/* ==========================
+   Адаптив
+========================== */
+@media (max-width: 768px) {
+
+  /* Ряд превращаем в колонку */
+  .hat-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  /* Убираем колонку внутри */
+  .hat-column {
+    width: 100%;
+  }
+
+  /* Все размеры отменяем */
+  .hat-large,
+  .hat-medium,
+  .hat-small {
+    width: 100%;
+  }
+
+  /* Все изображения одинаковой ширины */
+  .hat img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Уменьшаем описание на мобильных */
+  .hat p {
+    font-size: 16px;
+  }
+}
+/* ==========================
+   ФУТЕР
+========================== */
+.footer {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;          /* колонки одинаковой высоты */
+  justify-content: flex-start;
+  padding: 40px 80px 59px 80px; /* верх 40, право 80, низ 59, лево 80 */
+  background: #000000;
+  width: 100%;
+  box-sizing: border-box;
+  gap: 56px;
+  flex-wrap: nowrap;
+}
+
+/* Логотип */
+.footer .logo {
+  width: 104px;
+  flex: none;
+}
+
+/* ==========================
+   2 и 3 КОЛОНКИ: col и col-2
+========================== */
+.footer .col,
+.footer .col-2 {
+  display: flex;
+  flex-direction: column;
+  flex: none;
+}
+
+/* Контейнер для заголовка без списка*/
+.footer .col .blok,
+.footer .col-2 .blok {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;  /* отступ снизу перед следующим блоком */
+}
+/* Контейнер для заголовка со списком */
+.footer .col .catalog .blok-1,
+.footer .col .atelier .blok-1,
+.footer .col-2 .special-offers .blok-1,
+.footer .col-2 .client-service .blok-1{
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;     /* отступ сверху от предыдущего блока */
+  margin-bottom: 8px;   /* отступ снизу перед ссылками или следующим блоком */
+}
+
+/* Заголовки блоков */
+.footer .col .catalog h3 a,
+.footer .col .atelier h3 a,
+.footer .col-2 .special-offers h3 a,
+.footer .col-2 .client-service h3 a,
+.footer .col h3,
+.footer .col-2 h3 {
+  font-family: 'JetBrains Mono', monospace; /* шрифт заголовка */
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+/* Новости */
+.footer .col .blok .news a {
+  color: #FF6668;           /* красный текст */
+  text-decoration: none;
+}
+/* О компании */ 
+.footer .col-2 .blok .company a {
+  color: #FFFFFF;          
+  text-decoration: none;
+}
+
+/* Группы ссылок */
+.footer .col .catalog,
+.footer .col .atelier,
+.footer .col-2 .special-offers,
+.footer .col-2 .client-service {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;                        /* расстояние между ссылками внутри блока */
+}
+
+/* Ссылки внутри групп */
+.footer .col .catalog a,
+.footer .col .atelier a,
+.footer .col-2 .special-offers a,
+.footer .col-2 .client-service a {
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 140%;
+  color: #FFFFFF;
+  text-decoration: none;
+  margin: 0;
+}
+/* 4-я колонка */
+.footer .col-3 {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+  flex: none;
+}
+
+/* Контакты */
+.footer .col-3 .contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* прижимает к правому краю */
+  gap: 13px; /* расстояние между магазином и телефоном */
+  
+}
+
+.footer .col-3 .contacts .shop a {
+  font-weight: 300; /* light */
+  white-space: nowrap;        /* запрет переноса */
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 140%;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.footer .col-3 .contacts .phone a {
+  font-weight: 700; /* bold */
+  white-space: nowrap; /* запрет переноса */
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 140%;
+  color: #FFFFFF; /* белый текст */
+  text-decoration: none; /* убираем подчеркивание */
+}
+
+/* Мессенджеры */
+.footer .col-3 .messengers {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  justify-content: flex-end; /* прижимает к правому краю */
+}
+
+/* Кнопка "ЗАКАЗАТЬ ЗВОНОК" */
+.footer .col-3 .call-button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 11px 10px 13px 10px;
+  gap: 8px;
+  width: 206px;
+  height: 48px;
+  border: 1px solid #FF6668;
+  border-radius: 25px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 140%;
+  color: #FFFFFF;
+  text-decoration: none;
+  margin-top: auto; /* прижимает к низу колонки */
+}
+
+/* ==========================
+   Иконка чата
+========================== */
+.chat-button {
+  position: fixed;          /* фиксируем относительно окна по вертикали */
+  bottom: 59px;             /* всегда 59px от нижнего края окна */
+  right: calc((100% - 1000px)/2 + 16px);
+  display: inline-block;
+  width: 56px;              /* размер иконки */
+  height: 56px;
+  z-index: 9999;            /* чтобы всегда сверху */
+  cursor: pointer;
+  transition: transform 0.3s ease; /* плавное движение при hover */
+}
+
+.chat-button img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Эффект при наведении */
+.chat-button:hover {
+  transform: scale(1.1);
+}

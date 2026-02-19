@@ -152,7 +152,7 @@ body {
   width: 840px;
   max-width: 100%;
   margin: 40px auto;
-  padding: 0 20px; /* чтобы текст не прилипал к краям на маленьких экранах */
+  padding: 0;
   text-align: center;
 }
 
@@ -184,7 +184,7 @@ body {
   grid-template-columns: repeat(2, 1fr); /* 2 колонки одинаковой ширины */
   grid-template-rows: repeat(2, auto);  /* 2 строки */
   gap: 20px;                            /* расстояние между элементами */
-  margin: 40px auto;
+  margin: 56px auto;
 }
 
 .service-item {
@@ -551,3 +551,4 @@ body {
   transform: scale(1.1);
 
 }
+

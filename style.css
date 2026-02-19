@@ -98,7 +98,7 @@ body {
 
 /* Вводная */
 .intro {
-  padding: 2rem 8%;
+  padding: 2.625em 8% 3.5rem 8%;
   text-align: center;
 }
 
@@ -114,20 +114,19 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* 2 колонки на десктопе */
   gap: var(--gap);
-  max-width: 840px; /* 1000px минус 80px слева и справа */
   margin: 0 auto;   /* по центру страницы */
-  padding: 2rem 0;  /* верх/низ */
+  padding: 3.5rem 8% 4.5rem 8%;
 }
 
 .service {
-  background: #f5f5f5;
-  border-radius: 0.3125rem;
-  padding: 1.25rem;
+  background: #FFFFFF;         
+  border: 1px solid #E1E8ED;   
+  border-radius: 1.125rem;     
+  padding: 1rem;            
   text-align: left;
 }
-
 .service img {
-  width: 3.25rem;
+  width: auto;
   height: 3.5rem;
   object-fit: contain;
 }
@@ -140,6 +139,7 @@ body {
 }
 
 .service p {
+  font-family: var(--font-base);
   font-weight: 300;
   font-size: 1.125rem;
 }
@@ -148,7 +148,7 @@ body {
    ПРОДУКТЫ
 ========================== */
 .products {
-  padding: 2rem 5%;
+  padding: 4.5rem 8% 5.5rem 8%;
 }
 
 .products-header {
@@ -211,10 +211,14 @@ body {
   margin-top: 0.625rem;
 }
 
+.product-small {
+  margin-right: 35%;
+}
+
 /* Размеры карточек */
-.product-large { flex: 1 1 40%; }
-.product-medium { flex: 1 1 30%; }
-.product-small { flex: 1 1 25%; }
+.product-large  { flex: 1 1 35%; }
+.product-medium { flex: 1 1 27%; }
+.product-small  { flex: 1 1 22%; }
 
 /* ==========================
    ФУТЕР
@@ -225,7 +229,7 @@ body {
   gap: 3.5rem;
   background: var(--color-primary);
   color: var(--color-secondary);
-  padding: 2.5rem 5%;
+  padding: 2.5rem 8% 3.6875rem 8%;
 }
 
 .footer-logo img {

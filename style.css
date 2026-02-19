@@ -533,8 +533,8 @@ body {
   bottom: 59px;             /* всегда 59px от нижнего края окна */
   right: calc((100% - 1000px)/2 + 16px);
   display: inline-block;
-  width: 56px;              /* размер иконки */
-  height: 56px;
+  width: 48px;              /* размер иконки */
+  height: 48px;
   z-index: 9999;            /* чтобы всегда сверху */
   cursor: pointer;
   transition: transform 0.3s ease; /* плавное движение при hover */
@@ -549,4 +549,5 @@ body {
 /* Эффект при наведении */
 .chat-button:hover {
   transform: scale(1.1);
+
 }
